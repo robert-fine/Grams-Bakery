@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gram's Bakery</title>
     <script src="https://kit.fontawesome.com/732ee2ef9e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -36,25 +37,188 @@
           <div class="btn">Explore</div>
         </div>
         <div class="right">
-          <div class="about-img-border"></div>
-          <img src="/images/about.jpg" alt="Macaroons">
+          <div class="img-container">
+            <img src="/images/about.jpg" alt="Macaroons">
+          </div>
         </div>
       </div>
-      <div class="container flex-column" id="store">
+      <div class="store" id="store">
+      <div class="container flex-column">
         <h2>Our <span class="highlight">Store</span></h2>
-        <div>
           <ul class="flex-row store-filters">
-            <li><div class="btn">All</div></li>
+            <li><div class="btn selected">All</div></li>
             <li><div class="btn">Cakes</div></li>
+            <li><div class="btn">Cookies</div></li>
             <li><div class="btn">Cupcakes</div></li>
-            <li><div class="btn">Sweets</div></li>
             <li><div class="btn">Donuts</div></li>
           </ul>
+        <div class="search flex-row">
+          <div class="search-icon flex-row">
+            <i class="fas fa-search"></i>
+          </div>
+          <input type="text"  class="store-search" placeholder="item...">
         </div>
-        <div class="store-search">
-          <input type="text">
+        <div class="cards grid-3">
+          
+          <div class="card card1 cookie">
+            <div class="card-img">
+              <img src="/images/cookie-1.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card2 cupcake">
+            <i class="fas fa-cart-plus"></i>
+            <div class="card-img">
+              <img src="/images/cupcake-1.jpg" alt="">
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card3 cake">
+            <div class="card-img">
+              <img src="/images/cake-1.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card4 donut">
+            <div class="card-img">
+              <img src="/images/donut-1.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card5 cookie">
+            <div class="card-img">
+              <img src="/images/cookie-2.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card6 cupcake">
+            <div class="card-img">
+              <img src="/images/cupcake-2.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card7 cake">
+            <div class="card-img">
+              <img src="/images/cake-2.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card8 donut">
+            <div class="card-img">
+              <img src="/images/donut-2.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card9 cookie">
+            <div class="card-img">
+              <img src="/images/cookie-3.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card10 cupcake">
+            <div class="card-img">
+              <img src="/images/cupcake-3.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card11 cake">
+            <div class="card-img">
+              <img src="/images/cake-3.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card12 dounut">
+            <div class="card-img">
+              <img src="/images/donut-3.jpg" alt="">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card-description">
+              <ul class="flex-row">
+                <li class="card-name">Macaroon</li>
+                <li class="price">$5</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
+    </div>
     </main>
   </body>
 </html>
