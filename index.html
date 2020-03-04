@@ -25,7 +25,7 @@
       <div id="home" class="hero">
         <div class="container flex-column">
           <h1>Welcome to <span class="highlight">Gram's Bakery</span></h1>
-          <div class="btn">Explore</div>
+          <a href="#store" class="btn">Explore</a>
         </div>
       </div>
     </header>
@@ -34,7 +34,6 @@
         <div class="left">
           <h2>About <span class="highlight">Us</span></h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!</p>
-          <div class="btn">Explore</div>
         </div>
         <div class="right">
           <div class="img-container">
@@ -46,11 +45,11 @@
       <div class="container flex-column">
         <h2>Our <span class="highlight">Store</span></h2>
           <ul class="flex-row store-filters">
-            <li><div class="btn selected">All</div></li>
-            <li><div class="btn">Cakes</div></li>
-            <li><div class="btn">Cookies</div></li>
-            <li><div class="btn">Cupcakes</div></li>
-            <li><div class="btn">Donuts</div></li>
+            <li><div class="btn store-btn selected" data-filter="all">All</div></li>
+            <li><div class="btn store-btn" data-filter="cakes">Cakes</div></li>
+            <li><div class="btn store-btn" data-filter="cookies">Cookies</div></li>
+            <li><div class="btn store-btn" data-filter="cupcakes">Cupcakes</div></li>
+            <li><div class="btn store-btn" data-filter="donuts">Donuts</div></li>
           </ul>
         <div class="search flex-row">
           <div class="search-icon flex-row">
@@ -60,7 +59,7 @@
         </div>
         <div class="cards">
           
-          <div class="card card1 cookie">
+          <div class="card cookie" data-item="cookies">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cookie-1.jpg" alt="" class="card-img">
@@ -73,7 +72,7 @@
             </div>
           </div>
 
-          <div class="card card2 cupcake">
+          <div class="card cupcake" data-item="cupcakes">
             <i class="fas fa-cart-plus  fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cupcake-1.jpg" alt="" class="card-img">
@@ -86,7 +85,7 @@
             </div>
           </div>
 
-          <div class="card card3 cake">
+          <div class="card cake" data-item="cakes">
             <i class="fas fa-cart-plus  fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cake-1.jpg" alt="" class="card-img">
@@ -99,7 +98,7 @@
             </div>
           </div>
 
-          <div class="card card4 donut">
+          <div class="card donut" data-item="donuts">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/donut-1.jpg" alt="" class="card-img">
@@ -112,7 +111,7 @@
             </div>
           </div>
 
-          <div class="card card5 cookie">
+          <div class="card cookie" data-item="cookies">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cookie-2.jpg" alt="" class="card-img">
@@ -125,7 +124,7 @@
             </div>
           </div>
 
-          <div class="card card6 cupcake">
+          <div class="card cupcake" data-item="cupcakes">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cupcake-2.jpg" alt="" class="card-img">
@@ -138,7 +137,7 @@
             </div>
           </div>
 
-          <div class="card card7 cake">
+          <div class="card cake" data-item="cakes">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cake-2.jpg" alt="" class="card-img">
@@ -151,7 +150,7 @@
             </div>
           </div>
 
-          <div class="card card8 donut">
+          <div class="card donut" data-item="donuts">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/donut-2.jpg" alt="" class="card-img">
@@ -164,7 +163,7 @@
             </div>
           </div>
 
-          <div class="card card9 cookie">
+          <div class="card cookie" data-item="cookies">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cookie-3.jpg" alt="" class="card-img">
@@ -177,7 +176,7 @@
             </div>
           </div>
 
-          <div class="card card10 cupcake">
+          <div class="card cupcake" data-item="cupcakes">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cupcake-3.jpg" alt="" class="card-img">
@@ -190,7 +189,7 @@
             </div>
           </div>
 
-          <div class="card card11 cake">
+          <div class="card cake" data-item="cakes">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/cake-3.jpg" alt="" class="card-img">
@@ -203,7 +202,7 @@
             </div>
           </div>
 
-          <div class="card card12 dounut">
+          <div class="card donut" data-item="donuts">
             <i class="fas fa-cart-plus fa-2x"></i>
             <div class="card-img-container">
               <img src="/images/donut-3.jpg" alt="" class="card-img">
@@ -220,5 +219,6 @@
       </div>
     </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>

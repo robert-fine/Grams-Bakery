@@ -1,15 +1,19 @@
-$light-color: #f4f4f4;
-$dark-color: #333;
-$grey-color: #c7c7c7;
+$light-color: #f7f5dd;
+$dark-color: #670024;
+$grey-color: #bea5ab;
 $highlight-color: #ec5f8e;
 $highlight-color-secondary: #00c89a;
 $font-stack-main: Arial, Helvetica, sans-serif;
-$font-stack: 'Kaushan Script';
+$font-stack: "Kaushan Script";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -38,13 +42,17 @@ $font-stack: 'Kaushan Script';
 
   &:hover {
     background: $dark-color;
-    color: $highlight-color;
+    color: $light-color;
     border: 2px solid $highlight-color;
   }
 }
 
 .highlight {
   color: $highlight-color;
+}
+
+.hidden {
+  display: none;
 }
 
 body {
@@ -108,7 +116,7 @@ nav {
 }
 
 .hero {
-  background: url('/images/hero-background.jpg') no-repeat center/cover fixed;
+  background: url("/images/hero-background.jpg") no-repeat center/cover fixed;
   height: 100vh;
   color: white;
 
@@ -131,8 +139,7 @@ nav {
     border: 2px solid $light-color;
 
     &:hover {
-      color: $highlight-color;
-      border: 2px solid $highlight-color;
+      color: $light-color;
     }
   }
 }
@@ -161,7 +168,7 @@ nav {
       position: relative;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -1.5rem;
         left: -1.5rem;
@@ -189,6 +196,10 @@ nav {
   .container {
     justify-content: center;
     align-items: center;
+
+    .highlight {
+      color: $dark-color;
+    }
 
     .store-filters {
       margin: 1rem 0;
@@ -226,6 +237,7 @@ nav {
         padding: 0.5rem 0.75rem;
         border-radius: 0 5px 5px 0;
         border: none;
+        background-color: $light-color;
       }
     }
 
