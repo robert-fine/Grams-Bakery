@@ -326,7 +326,35 @@ nav {
 
   .container {
     position: relative;
-    display: block;
+    display: flex;
+    transform: scale(0);
+    transition-duration: 0.15s;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: $dark-color;
+    background-color: $light-color;
+    border-radius: 5px;
+
+    .modal-section1 {
+      max-width: 350px;
+      max-height: 300px;
+      overflow: hidden;
+
+      .modal-img {
+        height: 100%;
+        border-radius: 5px;
+      }
+    }
+
+    .modal-section2 {
+      margin: 2rem;
+      max-width: 300px;
+
+      h3 {
+        padding-bottom: 1rem;
+      }
+    }
 
     i {
       position: absolute;

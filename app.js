@@ -44,14 +44,19 @@ storeCards.forEach(card =>
   card.addEventListener('click', function openModal(e) {
     e.preventDefault();
     modalPopup.style.display = 'flex';
+
+    const modalContainer = document.querySelector('.modal-container');
+    setTimeout(() => (modalContainer.style.transform = 'scale(1)'), 001);
+
     const modalClose = modalPopup.querySelector('.close');
 
+    // modalPopup.addEventListener('click', closeModal);
     modalClose.addEventListener('click', closeModal);
 
     function closeModal(e) {
-      e.preventDefault();
-      modalPopup.style.display = 'none';
+      // e.stopPropagation();
+      modalContainer.style.transform = 'scale(0)';
+      setTimeout(() => (modalPopup.style.display = 'none'), 175);
     }
-    console.log(this);
   })
 );

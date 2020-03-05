@@ -284,7 +284,38 @@ nav {
           align-items: center; }
   .modal .container {
     position: relative;
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #670024;
+    background-color: #f7f5dd;
+    border-radius: 5px; }
+    .modal .container .modal-section1 {
+      max-width: 350px;
+      max-height: 300px;
+      overflow: hidden; }
+      .modal .container .modal-section1 .modal-img {
+        height: 100%;
+        border-radius: 5px; }
+    .modal .container .modal-section2 {
+      margin: 2rem;
+      max-width: 300px; }
+      .modal .container .modal-section2 h3 {
+        padding-bottom: 1rem; }
     .modal .container i {
       position: absolute;
       color: #ec5f8e;
