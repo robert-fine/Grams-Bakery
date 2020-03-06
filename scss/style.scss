@@ -4,7 +4,7 @@ $grey-color: #bea5ab;
 $highlight-color: #ec5f8e;
 $highlight-color-secondary: #00c89a;
 $font-stack-main: Arial, Helvetica, sans-serif;
-$font-stack: 'Kaushan Script';
+$font-stack: "Kaushan Script";
 
 * {
   box-sizing: border-box;
@@ -98,7 +98,7 @@ nav {
   }
 
   .logo {
-    font-size: large;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: $font-stack;
   }
@@ -116,7 +116,7 @@ nav {
 }
 
 .hero {
-  background: url('/images/hero-background.jpg') no-repeat center/cover fixed;
+  background: url("/images/hero-background.jpg") no-repeat center/cover fixed;
   height: 100vh;
   color: white;
 
@@ -135,11 +135,12 @@ nav {
   }
 
   .btn {
-    color: $light-color;
-    border: 2px solid $light-color;
+    background: $light-color;
 
     &:hover {
       color: $light-color;
+      background: $dark-color;
+      border: 2px solid $light-color;
     }
   }
 }
@@ -168,7 +169,7 @@ nav {
       position: relative;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: -1.5rem;
         left: -1.5rem;
@@ -288,6 +289,10 @@ nav {
           z-index: 1;
           background-color: $light-color;
           height: 50px;
+
+          .item-description {
+            display: none;
+          }
         }
 
         ul {
@@ -349,7 +354,7 @@ nav {
 
     .modal-section2 {
       margin: 2rem;
-      max-width: 300px;
+      width: 300px;
 
       h3 {
         padding-bottom: 1rem;
