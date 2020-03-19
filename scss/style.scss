@@ -119,6 +119,7 @@ nav {
   background: url("/images/hero-background.jpg") no-repeat center/cover fixed;
   height: 100vh;
   color: white;
+  position: relative;
 
   .container {
     height: inherit;
@@ -387,6 +388,73 @@ nav {
       top: 50%;
       right: -3rem;
       transform: translateY(-50%);
+    }
+  }
+}
+
+#cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: $light-color;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .cart-item {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      color: $dark-color;
+      padding-bottom: 1rem;
+      align-items: center;
+
+      .item-pic img {
+        border: 2px solid $dark-color;
+        border-radius: 100%;
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .item-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .delete-icon {
+        cursor: pointer;
+
+        &:hover {
+          color: $highlight-color;
+        }
+      }
+    }
+  }
+
+  .btn {
+    // font-size: large;
+
+    &:hover {
+      border: 2px solid $dark-color;
+    }
+  }
+
+  .checkout {
+    background: $highlight-color-secondary;
+    color: white;
+
+    &:hover {
+      background: $dark-color;
     }
   }
 }
