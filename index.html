@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gram's Bakery</title>
-    <script src="https://kit.fontawesome.com/732ee2ef9e.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/732ee2ef9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -16,9 +22,15 @@
           <ul class="nav-links flex-row">
             <li><a href="#about">About</a></li>
             <li><a href="#store">Store</a></li>
-            <li class="phone"><a href=""tel:555-555-5555""><i class="fas fa-phone"></i> (555) 555-5555</a></li>
+            <li class="phone">
+              <a href="tel:555-555-5555"
+                ><i class="fas fa-phone"></i> (555) 555-5555</a
+              >
+            </li>
           </ul>
-          <div class="cart btn"><i class="fas fa-shopping-cart"></i> 2 Items - $12</div>
+          <div class="cart btn">
+            <i class="fas fa-shopping-cart"></i> 2 Items - $12
+          </div>
         </div>
       </nav>
       <div id="home" class="hero">
@@ -26,11 +38,11 @@
           <h1>Welcome to <span class="highlight">Gram's Bakery</span></h1>
           <a href="#store" class="btn">Explore</a>
         </div>
-        <div class="container" id="cart">
+        <div class="container hidden" id="cart">
           <div class="cart-items">
             <ul class="cart-item">
               <li class="item-pic">
-                <img src="/images/cookie-1.jpg" alt="">
+                <img src="/images/cookie-1.jpg" alt="" />
               </li>
               <ul class="item-description">
                 <li class="item-name">Cookies</li>
@@ -40,7 +52,7 @@
             </ul>
             <ul class="cart-item">
               <li class="item-pic">
-                <img src="/images/cookie-1.jpg" alt="">
+                <img src="/images/cookie-1.jpg" alt="" />
               </li>
               <ul class="item-description">
                 <li class="item-name">Cookies</li>
@@ -61,219 +73,246 @@
       <div class="container flex-row about" id="about">
         <div class="left">
           <h2>About <span class="highlight">Us</span></h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+            aliquam voluptas beatae vitae expedita consectetur nesciunt quia
+            deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro
+            at dolorum! Ad!
+          </p>
         </div>
         <div class="right">
           <div class="img-container">
-            <img src="/images/about.jpg" alt="">
+            <img src="/images/about.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="store" id="store">
-      <div class="container flex-column">
-        <h2>Our <span class="highlight">Store</span></h2>
+        <div class="container flex-column">
+          <h2>Our <span class="highlight">Store</span></h2>
           <ul class="flex-row store-filters">
-            <li><div class="btn store-btn selected" data-filter="all">All</div></li>
+            <li>
+              <div class="btn store-btn selected" data-filter="all">All</div>
+            </li>
             <li><div class="btn store-btn" data-filter="cakes">Cakes</div></li>
-            <li><div class="btn store-btn" data-filter="cookies">Cookies</div></li>
-            <li><div class="btn store-btn" data-filter="cupcakes">Cupcakes</div></li>
-            <li><div class="btn store-btn" data-filter="donuts">Donuts</div></li>
+            <li>
+              <div class="btn store-btn" data-filter="cookies">Cookies</div>
+            </li>
+            <li>
+              <div class="btn store-btn" data-filter="cupcakes">Cupcakes</div>
+            </li>
+            <li>
+              <div class="btn store-btn" data-filter="donuts">Donuts</div>
+            </li>
           </ul>
-        <div class="search flex-row">
-          <div class="search-icon flex-row">
-            <i class="fas fa-search"></i>
+          <div class="search flex-row">
+            <div class="search-icon flex-row">
+              <i class="fas fa-search"></i>
+            </div>
+            <input type="text" class="store-search" placeholder="item..." />
           </div>
-          <input type="text"  class="store-search" placeholder="item...">
+          <div class="cards">
+            <div class="card cookie" data-item="cookies">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cookie-1.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Macaroon</li>
+                  <li class="price">$5</li>
+                  <l1 class="item-description">Colorful little cookies.</l1>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cupcake" data-item="cupcakes">
+              <i class="fas fa-search-plus  fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cupcake-1.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Peanut Butter Cupcake</li>
+                  <li class="price">$5</li>
+                  <l1 class="item-description">Peanut butter jelly time.</l1>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cake" data-item="cakes">
+              <i class="fas fa-search-plus  fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cake-1.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Carrot Cake</li>
+                  <li class="price">$25</li>
+                  <l1 class="item-description">My uncle's favorite cake.</l1>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card donut" data-item="donuts">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/donut-1.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Frosted Donut with Sprinkles</li>
+                  <li class="price">$3</li>
+                  <l1 class="item-description"
+                    >The classic, loved by Homer Simpson.</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cookie" data-item="cookies">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cookie-2.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Chocolate Chip Cookie</li>
+                  <li class="price">$4</li>
+                  <l1 class="item-description"
+                    >This one needs no introduction. Beloved by kids
+                    everywhere.</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cupcake" data-item="cupcakes">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cupcake-2.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Chocolate Cupcake</li>
+                  <li class="price">$5</li>
+                  <l1 class="item-description"
+                    >Chocolate cupcake with chocolate icing and chocolate
+                    chips!</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cake" data-item="cakes">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cake-2.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Lemon Custard Cake</li>
+                  <li class="price">$35</li>
+                  <l1 class="item-description"
+                    >I could probably eat the whole thing by myself.</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card donut" data-item="donuts">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/donut-2.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Glazed Donut</li>
+                  <li class="price">$3</li>
+                  <l1 class="item-description"
+                    >Your fingers will be sticky, but it's worth it.</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cookie" data-item="cookies">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cookie-3.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Peanut Butter Blossom</li>
+                  <li class="price">$3</li>
+                  <l1 class="item-description"
+                    >This one is one of my favorite cookies.</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cupcake" data-item="cupcakes">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cupcake-3.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Blueberry Cupcake</li>
+                  <li class="price">$5</li>
+                  <l1 class="item-description">The icing is a pretty color.</l1>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card cake" data-item="cakes">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/cake-3.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Tiramisu (slice)</li>
+                  <li class="price">$7</li>
+                  <l1 class="item-description"
+                    >You'll feel like a millionare after eating one of
+                    these.</l1
+                  >
+                </ul>
+              </div>
+            </div>
+
+            <div class="card donut" data-item="donuts">
+              <i class="fas fa-search-plus fa-2x"></i>
+              <div class="card-img-container">
+                <img src="/images/donut-3.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-description">
+                <ul class="flex-row">
+                  <li class="card-name">Cake Donut</li>
+                  <li class="price">$4</li>
+                  <l1 class="item-description">Donut + cake = amazingness!</l1>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cards">
-          
-          <div class="card cookie" data-item="cookies">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cookie-1.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Macaroon</li>
-                <li class="price">$5</li>
-                <l1 class="item-description">Colorful little cookies.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cupcake" data-item="cupcakes">
-            <i class="fas fa-search-plus  fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cupcake-1.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Peanut Butter Cupcake</li>
-                <li class="price">$5</li>
-                <l1 class="item-description">Peanut butter jelly time.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cake" data-item="cakes">
-            <i class="fas fa-search-plus  fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cake-1.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Carrot Cake</li>
-                <li class="price">$25</li>
-                <l1 class="item-description">My uncle's favorite cake.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card donut" data-item="donuts">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/donut-1.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Frosted Donut with Sprinkles</li>
-                <li class="price">$3</li>
-                <l1 class="item-description">The classic, loved by Homer Simpson.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cookie" data-item="cookies">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cookie-2.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Chocolate Chip Cookie</li>
-                <li class="price">$4</li>
-                <l1 class="item-description">This one needs no introduction.  Beloved by kids everywhere.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cupcake" data-item="cupcakes">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cupcake-2.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Chocolate Cupcake</li>
-                <li class="price">$5</li>
-                <l1 class="item-description">Chocolate cupcake with chocolate icing and chocolate chips!</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cake" data-item="cakes">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cake-2.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Lemon Custard Cake</li>
-                <li class="price">$35</li>
-                <l1 class="item-description">I could probably eat the whole thing by myself.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card donut" data-item="donuts">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/donut-2.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Glazed Donut</li>
-                <li class="price">$3</li>
-                <l1 class="item-description">Your fingers will be sticky, but it's worth it.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cookie" data-item="cookies">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cookie-3.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Peanut Butter Blossom</li>
-                <li class="price">$3</li>
-                <l1 class="item-description">This one is one of my favorite cookies.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cupcake" data-item="cupcakes">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cupcake-3.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Blueberry Cupcake</li>
-                <li class="price">$5</li>
-                <l1 class="item-description">The icing is a pretty color.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card cake" data-item="cakes">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/cake-3.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Tiramisu (slice)</li>
-                <li class="price">$7</li>
-                <l1 class="item-description">You'll feel like a millionare after eating one of these.</l1>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card donut" data-item="donuts">
-            <i class="fas fa-search-plus fa-2x"></i>
-            <div class="card-img-container">
-              <img src="/images/donut-3.jpg" alt="" class="card-img">
-            </div>
-            <div class="card-description">
-              <ul class="flex-row">
-                <li class="card-name">Cake Donut</li>
-                <li class="price">$4</li>
-                <l1 class="item-description">Donut + cake = amazingness!</l1>
-              </ul>
-            </div>
-          </div>
-
+      </div>
+    </main>
+    <div class="modal">
+      <div class="container modal-container">
+        <i class="fas fa-window-close fa-3x close"></i>
+        <i class="fas fa-chevron-left fa-3x left modal-left"></i>
+        <i class="fas fa-chevron-right fa-3x right modal-right"></i>
+        <div class="modal-img-container modal-section1">
+          <img src="" alt="" class="modal-img" />
+        </div>
+        <div class="modal-section2">
+          <h3 class="modal-title"></h3>
+          <p class="modal-text"></p>
         </div>
       </div>
     </div>
-
-  </main>
-  <div class="modal">
-    <div class="container modal-container">
-      <i class="fas fa-window-close fa-3x close"></i>
-      <i class="fas fa-chevron-left fa-3x left modal-left"></i>
-      <i class="fas fa-chevron-right fa-3x right modal-right"></i>
-      <div class="modal-img-container modal-section1">
-        <img src="" alt="" class="modal-img">
-      </div>
-      <div class="modal-section2">
-        <h3 class="modal-title"></h3>
-        <p class="modal-text"></p>
-      </div>
-    </div>
-  </div>
 
     <script src="app.js"></script>
     <script src="cart.js"></script>
