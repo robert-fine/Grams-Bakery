@@ -1,23 +1,25 @@
 const cartBtn = document.querySelector(".cart");
 const cart = document.querySelector("#cart");
+const cartCloseBtn = document.querySelector(".close-icon");
 
-// function hideCartOnLoad() {
-//   cart.style.transform = "translateY(-100%)";
-//   cart.style.transition = "transform 2s";
-// }
+cartBtn.addEventListener("click", toggleCart);
 
-// hideCartOnLoad();
-
-cartBtn.addEventListener("click", openCart);
-
-function openCart() {
-  // e.preventDefault();
-  cart.classList.remove("hidden");
-  cart.classList.add("disp-flex");
-  setTimeout(() => {
-    cart.classList.add("animate-in");
-  }, 100);
+function toggleCart() {
+  if (cart.classList.contains("hidden")) {
+    cart.classList.remove("hidden");
+    cart.classList.add("disp-flex");
+    setTimeout(() => {
+      cart.classList.remove("animate-out");
+      cart.classList.add("animate-in");
+    }, 10);
+  } else {
+    cart.classList.remove("animate-in");
+    cart.classList.add("animate-out");
+    setTimeout(() => {
+      cart.classList.add("hidden");
+      cart.classList.remove("disp-flex");
+    }, 1000);
+  }
 }
 
-// The above code does not work properly.  I want the menu to animate in as a dropdown from above.
-// style.scss probably isn't set up properly.
+cartCloseBtn.addEventListener("click", toggleCart);

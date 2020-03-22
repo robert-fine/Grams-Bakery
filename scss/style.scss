@@ -87,6 +87,7 @@ h2 {
 
 nav {
   min-height: 80px;
+  overflow: visible;
 
   .container {
     justify-content: space-between;
@@ -257,7 +258,7 @@ nav {
         width: 350px;
         height: 350px;
 
-        i {
+        .fa-search-plus {
           position: absolute;
           right: 0;
           top: 0;
@@ -303,6 +304,22 @@ nav {
           justify-content: space-between;
           z-index: 1;
           background-color: $light-color;
+
+          .card-name {
+            flex-grow: 1;
+          }
+
+          .price {
+            margin-right: 0.5rem;
+          }
+
+          .fa-cart-plus {
+            padding: 0.25rem;
+
+            &:hover {
+              color: $highlight-color;
+            }
+          }
         }
 
         &:hover {
@@ -361,6 +378,23 @@ nav {
       h3 {
         padding-bottom: 1rem;
       }
+
+      .add-to-cart-btn {
+        background: $highlight-color-secondary;
+        padding: 0.25rem 1rem;
+        border-radius: 5px;
+        width: auto;
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 1rem;
+        color: black;
+        transition: 0.25s all;
+
+        &:hover {
+          background: $dark-color;
+          color: white;
+        }
+      }
     }
 
     i {
@@ -403,9 +437,24 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(-100%);
-  // display: flex;
   transition: transform 1s;
+  z-index: 10;
+
+  .close-icon-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .close-icon {
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+  }
 
   .cart-items {
     display: flex;
@@ -470,7 +519,10 @@ nav {
   display: flex;
 }
 
+.animate-out {
+  transform: translateY(-100%);
+}
+
 .animate-in {
-  // display: flex;
   transform: translateY(0);
 }
