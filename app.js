@@ -2,6 +2,7 @@ let storeBtns = document.querySelectorAll(".store-btn");
 const storeSearch = document.querySelector(".store-search");
 let storeCardNames = document.querySelectorAll(".card-name");
 let storeCards = document.querySelectorAll(".card");
+const cardsOutput = document.querySelector(".cards");
 const modalPopup = document.querySelector(".modal");
 const modalSection1 = document.querySelector(".modal-section1"); //modal image
 const modalTitle = document.querySelector(".modal-title");
@@ -106,4 +107,10 @@ function updateModal() {
   const cardDescription =
     cardList[count].children[2].children[0].children[2].innerText;
   modalItemDescription.innerHTML = cardDescription;
+
+  const addToCartBtn = document.querySelector(".add-to-cart-btn");
+
+  addToCartBtn.addEventListener("click", () => {
+    console.log(this);
+  });
 }

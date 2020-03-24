@@ -1,7 +1,7 @@
 const cartBtn = document.querySelector(".cart");
 const cart = document.querySelector("#cart");
 const cartCloseBtn = document.querySelector(".close-icon");
-let cardCartBtns = document.querySelectorAll(".fa-cart-plus");
+// let cardCartBtns = document.querySelectorAll(".fa-cart-plus");
 
 cartBtn.addEventListener("click", toggleCart);
 
@@ -23,13 +23,13 @@ function toggleCart() {
   }
 }
 
-cartCloseBtn.addEventListener("click", toggleCart);
+// cartCloseBtn.addEventListener("click", toggleCart);
 
-cardCartBtns.forEach(btn => {
-  btn.addEventListener("click", addToCart);
-});
+// cardCartBtns.forEach(btn => {
+//   btn.addEventListener("click", addToCart);
+// });
 
-function addToCart() {
-  console.log(this);
-}
-// figure out the above function
+// function addToCart() {
+//   console.log(this);
+// }
+// // figure out the above function
