@@ -1,32 +1,32 @@
-let storeBtns = document.querySelectorAll(".store-btn");
-const storeSearch = document.querySelector(".store-search");
-let storeCardNames = document.querySelectorAll(".card-name");
-let storeCards = document.querySelectorAll(".card");
-const cardsOutput = document.querySelector(".cards");
-const modalPopup = document.querySelector(".modal");
-const modalSection1 = document.querySelector(".modal-section1"); //modal image
-const modalTitle = document.querySelector(".modal-title");
-const modalItemDescription = document.querySelector(".modal-text");
-const modalNavLeft = document.querySelector(".modal-left");
-const modalNavRight = document.querySelector(".modal-right");
+let storeBtns = document.querySelectorAll('.store-btn');
+const storeSearch = document.querySelector('.store-search');
+let storeCardNames = document.querySelectorAll('.card-name');
+let storeCards = document.querySelectorAll('.card');
+let cardsOutput = document.querySelector('.cards');
+const modalPopup = document.querySelector('.modal');
+const modalSection1 = document.querySelector('.modal-section1'); //modal image
+const modalTitle = document.querySelector('.modal-title');
+const modalItemDescription = document.querySelector('.modal-text');
+const modalNavLeft = document.querySelector('.modal-left');
+const modalNavRight = document.querySelector('.modal-right');
 
 storeBtns.forEach(btn =>
-  btn.addEventListener("click", function filterItems(e) {
+  btn.addEventListener('click', function filterItems(e) {
     e.preventDefault();
 
     // change active button
-    const currentSelected = document.querySelector(".selected");
-    currentSelected.classList.remove("selected");
-    this.classList.add("selected");
+    const currentSelected = document.querySelector('.selected');
+    currentSelected.classList.remove('selected');
+    this.classList.add('selected');
 
     // filter cards
     storeCards.forEach(card => {
-      if (this.dataset.filter === "all") {
-        card.classList.remove("hidden");
+      if (this.dataset.filter === 'all') {
+        card.classList.remove('hidden');
       } else {
-        card.classList.add("hidden");
+        card.classList.add('hidden');
         if (card.dataset.item === this.dataset.filter) {
-          card.classList.remove("hidden");
+          card.classList.remove('hidden');
         }
       }
     });
@@ -34,13 +34,13 @@ storeBtns.forEach(btn =>
 );
 
 // search filter
-storeSearch.addEventListener("keyup", () =>
+storeSearch.addEventListener('keyup', () =>
   storeCards.forEach(card => {
-    card.classList.add("hidden");
+    card.classList.add('hidden');
     if (
       card.innerHTML.toLowerCase().includes(storeSearch.value.toLowerCase())
     ) {
-      card.classList.remove("hidden");
+      card.classList.remove('hidden');
     }
   })
 );
@@ -51,7 +51,7 @@ let count = 0;
 
 // modal image popup
 storeCards.forEach(card =>
-  card.addEventListener("click", function setCount() {
+  card.addEventListener('click', function setCount() {
     count = cardList.indexOf(this);
     openModal();
     updateModal();
@@ -59,22 +59,22 @@ storeCards.forEach(card =>
 );
 
 function openModal(e) {
-  modalPopup.style.display = "flex";
+  modalPopup.style.display = 'flex';
 
-  const modalContainer = document.querySelector(".modal-container");
-  setTimeout(() => (modalContainer.style.transform = "scale(1)"), 001);
+  const modalContainer = document.querySelector('.modal-container');
+  setTimeout(() => (modalContainer.style.transform = 'scale(1)'), 001);
 
-  const modalClose = modalPopup.querySelector(".close");
+  const modalClose = modalPopup.querySelector('.close');
 
   // modalPopup.addEventListener('click', closeModal);
-  modalClose.addEventListener("click", closeModal);
+  modalClose.addEventListener('click', closeModal);
 
   function closeModal(e) {
-    modalContainer.style.transform = "scale(0)";
-    setTimeout(() => (modalPopup.style.display = "none"), 175);
+    modalContainer.style.transform = 'scale(0)';
+    setTimeout(() => (modalPopup.style.display = 'none'), 175);
   }
 
-  modalNavLeft.addEventListener("click", () => {
+  modalNavLeft.addEventListener('click', () => {
     if (count === 0) {
       count = cardList.length - 1;
     } else {
@@ -83,7 +83,7 @@ function openModal(e) {
     updateModal();
   });
 
-  modalNavRight.addEventListener("click", () => {
+  modalNavRight.addEventListener('click', () => {
     if (count === cardList.length - 1) {
       count = 0;
     } else {
@@ -108,9 +108,9 @@ function updateModal() {
     cardList[count].children[2].children[0].children[2].innerText;
   modalItemDescription.innerHTML = cardDescription;
 
-  const addToCartBtn = document.querySelector(".add-to-cart-btn");
+  const addToCartBtn = document.querySelector('.add-to-cart-btn');
 
-  addToCartBtn.addEventListener("click", () => {
+  addToCartBtn.addEventListener('click', () => {
     console.log(this);
   });
 }

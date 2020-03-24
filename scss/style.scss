@@ -4,7 +4,7 @@ $grey-color: #bea5ab;
 $highlight-color: #ec5f8e;
 $highlight-color-secondary: #00c89a;
 $font-stack-main: Arial, Helvetica, sans-serif;
-$font-stack: "Kaushan Script";
+$font-stack: 'Kaushan Script';
 
 * {
   box-sizing: border-box;
@@ -118,7 +118,7 @@ nav {
 }
 
 .hero {
-  background: url("../images/hero-background.jpg") no-repeat center/cover fixed;
+  background: url('../images/hero-background.jpg') no-repeat center/cover fixed;
   height: 100vh;
   color: white;
   position: relative;
@@ -172,7 +172,7 @@ nav {
       position: relative;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: -1.5rem;
         left: -1.5rem;
@@ -258,7 +258,7 @@ nav {
         width: 350px;
         height: 350px;
 
-        .fa-search-plus {
+        .fa-cart-plus {
           position: absolute;
           right: 0;
           top: 0;
@@ -273,6 +273,7 @@ nav {
           transition-duration: 0.5s;
           transition-delay: 0.25s;
           z-index: 1;
+          font-size: 1.5rem;
         }
 
         .card-img-container {
@@ -311,14 +312,6 @@ nav {
 
           .price {
             margin-right: 0.5rem;
-          }
-
-          .fa-cart-plus {
-            padding: 0.25rem;
-
-            &:hover {
-              color: $highlight-color;
-            }
           }
         }
 
