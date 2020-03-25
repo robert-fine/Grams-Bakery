@@ -1,7 +1,7 @@
 const cartBtn = document.querySelector('.cart');
 const cart = document.querySelector('#cart');
 const cartCloseBtn = document.querySelector('.close-icon');
-// let cardCartBtns = document.querySelectorAll(".fa-cart-plus");
+let cart = [];
 
 cartBtn.addEventListener('click', toggleCart);
 
@@ -25,11 +25,7 @@ function toggleCart() {
 
 cartCloseBtn.addEventListener('click', toggleCart);
 
-// cardCartBtns.forEach(btn => {
-//   btn.addEventListener("click", addToCart);
-// });
-
-// function addToCart() {
-//   console.log(this);
-// }
+function addToCart() {
+  console.log(this);
+}
 // // figure out the above function
