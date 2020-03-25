@@ -1,7 +1,10 @@
 const cartBtn = document.querySelector('.cart');
 const cart = document.querySelector('#cart');
 const cartCloseBtn = document.querySelector('.close-icon');
-let cart = [];
+let cartArr = [];
+const cartItems = document.querySelector('.cart-items');
+const cartClear = document.querySelector('.clear-cart');
+let cartDeleteIcons = '';
 
 cartBtn.addEventListener('click', toggleCart);
 
@@ -25,7 +28,30 @@ function toggleCart() {
 
 cartCloseBtn.addEventListener('click', toggleCart);
 
-function addToCart() {
-  console.log(this);
+function updateCart() {
+  cartItems.innerHTML = '';
+  cartArr.forEach(item => {
+    cartItems.innerHTML += `
+    <ul class="cart-item">
+      <li class="item-pic">
+        <img src="images/${item.pic}" alt="" />
+      </li>
+      <ul class="item-description">
+        <li class="item-name">${item.name}</li>
+        <li class="item-price">$${item.price}</li>
+      </ul>
+      <li class="delete-icon"><i class="fas fa-trash"></i></li>
+  </ul>
+    `;
+  });
 }
-// // figure out the above function
+
+// function updateCartDeleteIcons() {
+//   cartDeleteIcons = document.querySelectorAll('.delete-icon');
+// }
+
+// cartDeleteIcons.forEach(btn =>
+//   btn.addEventListener('click', () => {
+//     console.log('delete icon clicked');
+//   })
+// );

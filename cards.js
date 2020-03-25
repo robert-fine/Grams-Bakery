@@ -1,8 +1,7 @@
 function loadCards() {
   cardItems.forEach(cardItem => {
-    if (cardItem.display == true) {
-      cardsOutput.innerHTML += `
-        <div class="card" data-item='${cardItem.type}'>
+    cardsOutput.innerHTML += `
+        <div id="${cardItem.id}" class="card" data-item='${cardItem.type}'>
           <i class="fas fa-cart-plus"></i>
           <div class="card-img-container">
             <img src="/images/${cardItem.pic}" alt="" class="card-img" />
@@ -19,14 +18,22 @@ function loadCards() {
           </div>
         </div>
       `;
-    }
   });
   updateCards();
 }
 
 function updateCards() {
   storeCards = document.querySelectorAll('.card');
-  storeCards.forEach(card => card.addEventListener('click', addToCart));
 }
 
 loadCards();
+
+storeCards.forEach(card =>
+  card.addEventListener('click', function addToCart() {
+    // console.log(cardItems.indexOf(card.id));
+    const thisCard = cardItems.find(({ id }) => id === card.id);
+    cartArr.push(thisCard);
+    updateCart();
+    updateCartDeleteIcons();
+  })
+);
