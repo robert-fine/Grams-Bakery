@@ -5,6 +5,8 @@ let cartArr = [];
 const cartItems = document.querySelector('.cart-items');
 const cartClear = document.querySelector('.clear-cart');
 let cartDeleteIcons = '';
+const cartDisplay = document.querySelector('.cart-display');
+const cartTotal = document.querySelector('.total');
 
 cartBtn.addEventListener('click', toggleCart);
 
@@ -45,6 +47,25 @@ function updateCart() {
     `;
   });
 }
+
+// Calculate the total price
+let cartTotalPrice;
+let totalPrice = 0;
+function calcTotalPrice() {
+  if (cartArr.length >= 0) {
+    cartArr.forEach(item => {
+      totalPrice += parseInt(item.price);
+    });
+  }
+}
+
+// calculate number of items in cart
+let cartNumber = 0;
+function updateCartNumber() {
+  cartNumber = cartArr.length;
+}
+
+function cartBtnUpdate() {}
 
 // function updateCartDeleteIcons() {
 //   cartDeleteIcons = document.querySelectorAll('.delete-icon');

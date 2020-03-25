@@ -30,10 +30,20 @@ loadCards();
 
 storeCards.forEach(card =>
   card.addEventListener('click', function addToCart() {
-    // console.log(cardItems.indexOf(card.id));
     const thisCard = cardItems.find(({ id }) => id === card.id);
     cartArr.push(thisCard);
     updateCart();
-    updateCartDeleteIcons();
+
+    // update cart price
+    totalPrice = 0;
+    calcTotalPrice();
+    updateCartNumber();
+    cartDisplay.innerText = `${cartNumber} Item(s) - $${totalPrice}`;
+    cartTotal.innerText = `Total $${totalPrice}`;
+
+    // popup for "added to cart"
+
+    // delete buttons in cart
+    // updateCartDeleteIcons();
   })
 );
