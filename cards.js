@@ -34,7 +34,7 @@ storeCards.forEach(card =>
     cartArr.push(thisCard);
     updateCart();
 
-    // update cart price
+    // update cart price & item count
     totalPrice = 0;
     calcTotalPrice();
     updateCartNumber();
@@ -44,6 +44,6 @@ storeCards.forEach(card =>
     // popup for "added to cart"
 
     // delete buttons in cart
-    // updateCartDeleteIcons();
+    updateCartDeleteIcons();
   })
 );

@@ -4,7 +4,7 @@ const cartCloseBtn = document.querySelector('.close-icon');
 let cartArr = [];
 const cartItems = document.querySelector('.cart-items');
 const cartClear = document.querySelector('.clear-cart');
-let cartDeleteIcons = '';
+let cartDeleteIcons;
 const cartDisplay = document.querySelector('.cart-display');
 const cartTotal = document.querySelector('.total');
 
@@ -65,14 +65,12 @@ function updateCartNumber() {
   cartNumber = cartArr.length;
 }
 
-function cartBtnUpdate() {}
+function updateCartDeleteIcons() {
+  cartDeleteIcons = document.querySelectorAll('.fa-trash');
 
-// function updateCartDeleteIcons() {
-//   cartDeleteIcons = document.querySelectorAll('.delete-icon');
-// }
-
-// cartDeleteIcons.forEach(btn =>
-//   btn.addEventListener('click', () => {
-//     console.log('delete icon clicked');
-//   })
-// );
+  cartDeleteIcons.forEach(btn =>
+    btn.addEventListener('click', () => {
+      console.log(btn.parentNode.parentNode);
+    })
+  );
+}
