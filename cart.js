@@ -1,37 +1,37 @@
-const cartBtn = document.querySelector('.cart');
-const cart = document.querySelector('#cart');
-const cartCloseBtn = document.querySelector('.close-icon');
+const cartBtn = document.querySelector(".cart");
+const cart = document.querySelector("#cart");
+const cartCloseBtn = document.querySelector(".close-icon");
 let cartArr = [];
-const cartItems = document.querySelector('.cart-items');
-const cartClear = document.querySelector('.clear-cart');
+const cartItems = document.querySelector(".cart-items");
+const cartClear = document.querySelector(".clear-cart");
 let cartDeleteIcons;
-const cartDisplay = document.querySelector('.cart-display');
-const cartTotal = document.querySelector('.total');
+const cartDisplay = document.querySelector(".cart-display");
+const cartTotal = document.querySelector(".total");
 
-cartBtn.addEventListener('click', toggleCart);
+cartBtn.addEventListener("click", toggleCart);
 
 function toggleCart() {
-  if (cart.classList.contains('hidden')) {
-    cart.classList.remove('hidden');
-    cart.classList.add('disp-flex');
+  if (cart.classList.contains("hidden")) {
+    cart.classList.remove("hidden");
+    cart.classList.add("disp-flex");
     setTimeout(() => {
-      cart.classList.remove('animate-out');
-      cart.classList.add('animate-in');
+      cart.classList.remove("animate-out");
+      cart.classList.add("animate-in");
     }, 10);
   } else {
-    cart.classList.remove('animate-in');
-    cart.classList.add('animate-out');
+    cart.classList.remove("animate-in");
+    cart.classList.add("animate-out");
     setTimeout(() => {
-      cart.classList.add('hidden');
-      cart.classList.remove('disp-flex');
+      cart.classList.add("hidden");
+      cart.classList.remove("disp-flex");
     }, 1000);
   }
 }
 
-cartCloseBtn.addEventListener('click', toggleCart);
+cartCloseBtn.addEventListener("click", toggleCart);
 
 function updateCart() {
-  cartItems.innerHTML = '';
+  cartItems.innerHTML = "";
   cartArr.forEach(item => {
     cartItems.innerHTML += `
     <ul class="cart-item">
@@ -66,11 +66,20 @@ function updateCartNumber() {
 }
 
 function updateCartDeleteIcons() {
-  cartDeleteIcons = document.querySelectorAll('.fa-trash');
+  cartDeleteIcons = document.querySelectorAll(".fa-trash");
 
   cartDeleteIcons.forEach(btn =>
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       console.log(btn.parentNode.parentNode);
     })
   );
 }
+
+cartClear.addEventListener("click", () => {
+  cartArr = [];
+  updateCart();
+  calcTotalPrice();
+  cartDisplay.innerText = `0 Item(s) - $0`;
+  cartTotal.innerText = ``;
+  toggleCart();
+});

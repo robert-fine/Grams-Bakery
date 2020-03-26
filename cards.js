@@ -4,7 +4,7 @@ function loadCards() {
         <div id="${cardItem.id}" class="card" data-item='${cardItem.type}'>
           <i class="fas fa-cart-plus"></i>
           <div class="card-img-container">
-            <img src="/images/${cardItem.pic}" alt="" class="card-img" />
+            <img src="images/${cardItem.pic}" alt="" class="card-img" />
           </div>
           <div class="card-description">
             <ul class="flex-row">
@@ -23,13 +23,13 @@ function loadCards() {
 }
 
 function updateCards() {
-  storeCards = document.querySelectorAll('.card');
+  storeCards = document.querySelectorAll(".card");
 }
 
 loadCards();
 
 storeCards.forEach(card =>
-  card.addEventListener('click', function addToCart() {
+  card.addEventListener("click", function addToCart() {
     const thisCard = cardItems.find(({ id }) => id === card.id);
     cartArr.push(thisCard);
     updateCart();
