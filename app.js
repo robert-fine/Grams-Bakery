@@ -3,6 +3,7 @@ const storeSearch = document.querySelector('.store-search');
 let storeCardNames = document.querySelectorAll('.card-name');
 let cardsOutput = document.querySelector('.cards');
 let storeCards;
+const addedToCartNote = document.querySelector('.add-notification');
 
 storeBtns.forEach(btn =>
   btn.addEventListener('click', function filterItems(e) {

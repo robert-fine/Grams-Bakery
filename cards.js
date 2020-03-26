@@ -23,13 +23,13 @@ function loadCards() {
 }
 
 function updateCards() {
-  storeCards = document.querySelectorAll(".card");
+  storeCards = document.querySelectorAll('.card');
 }
 
 loadCards();
 
 storeCards.forEach(card =>
-  card.addEventListener("click", function addToCart() {
+  card.addEventListener('click', function addToCart() {
     const thisCard = cardItems.find(({ id }) => id === card.id);
     cartArr.push(thisCard);
     updateCart();
@@ -42,6 +42,8 @@ storeCards.forEach(card =>
     cartTotal.innerText = `Total $${totalPrice}`;
 
     // popup for "added to cart"
+    addedToCartNote.classList.remove('hidden');
+    setTimeout(() => addedToCartNote.classList.add('hidden'), 2000);
 
     // delete buttons in cart
     updateCartDeleteIcons();
